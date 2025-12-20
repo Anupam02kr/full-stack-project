@@ -1,0 +1,46 @@
+<% layout('/layouts/boilerplate') -%>
+    <br />
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h1>Create new List</h1>
+            <form method="POST" action="/listing"  class="needs-validation" novalidate enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" id="title" name="listing[title]" placeholder="Add a catchy Title"
+                        class="form-control" required>
+                        <div class="valid-feedback">looks good!</div>
+                        <div class="invalid-feedback">Choose approprite title</div>
+                </div>
+                <div class="mb-3">
+                    <label for="Description" class="form-label">Description</label>
+                    <textarea name="listing[description]" id="Description" placeholder="Description"
+                        class="form-control" required></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="url" class="form-label">Upload listing Image </label>
+                    <input name="listing[image]" type="file" id="url" placeholder="image Url" class="form-control" >
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-4">
+                        <label for="price" class="form-label">Price</label>
+                        <input type="number" id="price" name="listing[price]" placeholder="Price" class="form-control" required>
+                    </div>
+                    <div class="mb-3 col-8">
+                        <label for="country" class="form-label">Country</label>
+                        <input type="text" id="country" name="listing[country]" placeholder="Country"
+                            class="form-control">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" id="location" name="listing[location]" placeholder="Location"
+                        class="form-control" >
+                </div>
+                <br />
+                <button type="submit" class="btn btn-dark add-btn">Add</button>
+                <br/><br/>
+            </form>
+        </div>
+    </div>

@@ -1,0 +1,40 @@
+<%- layout('/layouts/boilerplate') -%>
+    <br />
+    <div class="row">
+        <div class="col-8 offset-2">
+            <form method="POST" action="/listing/<%=listin._id%>?_method=PUT" enctype="multipart/form-data" >
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input id="title" type="text" name="listing[title]" value="<%=listin.title%>" placeholder="Title"
+                        class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea id="description" name="listing[description]"
+                        class="form-control"><%=listin.description%></textarea>
+                </div> 
+                <div class="mb-3">
+                    <label for="url" class="form-label">Upload New Image</label>
+                    <input name="listing[image]" id="url" type="file" placeholder="image"  class="form-control">
+                </div> 
+
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price</label>
+                    <input id="price" type="number" name="listing[price]" value="<%=listin.price%>"
+                        class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <input id="country" type="text" name="listing[location]" value="<%=listin.location%>"
+                        class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input id="location" type="text" name="listing[country]" value="<%=listin.country%>"
+                        class="form-control">
+                </div>
+                <br />
+                <button type="submit" class="btn btn-primary mb-2">Edit Listing</button>
+            </form>
+        </div>
+    </div>
