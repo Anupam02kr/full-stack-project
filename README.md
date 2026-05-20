@@ -1,4 +1,4 @@
-*MajorProject** is a full-stack web application built with **Node.js, Express, MongoDB Atlas, and EJS**.  
+This is a full-stack web application built with **Node.js, Express, MongoDB Atlas, and EJS**.  
 
 It allows users to:
 
